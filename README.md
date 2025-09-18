@@ -83,7 +83,9 @@ LuminaAI est une plateforme de création de contenu visuel innovante qui révolu
 - **Base de données**: MongoDB avec Prisma ORM
 - **Authentification**: NextAuth.js avec JWT
 - **Paiements**: Stripe (abonnements et paiements uniques)
-- **Stockage**: Cloudinary et ImageKit
+- **Stockage**: 
+  - **Cloudinary** pour le stockage et l'optimisation des images
+  - **ImageKit** pour la diffusion et la transformation d'images en temps réel
 - **API Routes**: Next.js API Routes
 
 ### Outils de Développement
