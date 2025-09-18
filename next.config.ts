@@ -2,16 +2,24 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: {
-    domains: ['lh3.googleusercontent.com', 'avatars.githubusercontent.com'],
+    domains: [
+      'res.cloudinary.com',
+      'lh3.googleusercontent.com',
+      'avatars.githubusercontent.com'
+    ],
     formats: ['image/avif', 'image/webp'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
+    ],
   },
   experimental: {
     serverActions: {
-      bodySizeLimit: '2mb',
+      bodySizeLimit: '10mb',
     },
-    serverComponentsExternalPackages: ['@prisma/client'],
   },
   eslint: {
     ignoreDuringBuilds: true,
@@ -19,6 +27,7 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  serverExternalPackages: ['@prisma/client', 'cloudinary'],
 };
 
 export default nextConfig;

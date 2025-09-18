@@ -230,9 +230,9 @@ const UploadZone = ({ onImageUpload }: UploadZoneProps) => {
                 : 'Faites glisser et déposez ou cliquez pour parcourir'}
             </p>
 
-            <Button 
-              variant='outline' 
-              className='glass border-card-border' 
+            <Button
+              variant='outline'
+              className='glass border-card-border'
               disabled={isUploading}
               onClick={() => document.getElementById('file-upload')?.click()}
             >
